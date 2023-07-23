@@ -11,6 +11,7 @@
 #include "./lib/document.h"
 #include "./lib/queue.h"
 #include "./lib/bst.h"
+#include "./lib/manual.h"
 
 using namespace std;
 
@@ -24,7 +25,8 @@ int main() {
     while (true) {
         vector<int> selectedFilesIndice;
         Queue queue;
-        
+
+        print_manual();
         vector<string> allFiles = getAllFilesInDirectory(dir);
         if (isDirectoryEmpty(dir) || allFiles.size() < 2) {
             cout << "It seems you have not imported at least two document files. This program requires two files to check for their similarity. Please import them to the directory /bin/origin before proceeding." << endl;
